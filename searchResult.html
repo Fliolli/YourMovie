@@ -9,7 +9,6 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- CSS -->
     <link href="css/styles.css" rel="stylesheet">
-    <script src="scripts/sortMovies.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -65,60 +64,12 @@
           </div>
         </nav>
       </header>
-      <section class="myContent">
-        <div class="filterGrid">
-          <select name="genres" id="genres" class="form-control" data-bind="value: genre">
-            <option value="">Genres</option>
-            <option value="28">Action</option>
-            <option value="12">Adventure</option>
-            <option value="16">Animation</option>
-            <option value="35">Comedy</option>
-            <option value="80">Crime</option>
-            <option value="99">Documentary</option>
-            <option value="18">Drama</option>
-            <option value="10751">Family</option>
-            <option value="14">Fantasy</option>
-            <option value="36">History</option>
-            <option value="27">Horror</option>
-            <option value="10402">Music</option>
-            <option value="9648">Mystery</option>
-            <option value="10749">Romance</option>
-            <option value="878">Sci-Fi</option>
-            <option value="10770">TV Movie</option>
-            <option value="53">Thriller</option>
-            <option value="10752">War</option>
-            <option value="37">Western</option>
-          </select>
-          <select name="sort" id="type" class="form-control" data-bind="value: params.order">
-            <option value="">Order By</option>
-            <option value="release_date.desc">Release Date Descending</option>
-            <option value="release_date.asc">Release Date Ascending</option>
-            <option value="vote_average.desc">Highest Rated First</option>
-            <option value="vote_average.asc">Lowest Rated First</option>
-            <option value="vote_count.desc">Most Rated First</option>
-            <option value="vote_count.asc">Least Rated First</option>
-            <option value="title.asc">Title A-Z</option>
-            <option value="title.desc">Title Z-A</option>
-          </select>
-          <select name="minRating" id="rating" class="form-control" data-bind="value: params.minRating">
-            <option value="">Minimum Rating</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <input type='number' class="form-control" placeholder="Released Before Year" id='min_year' min="1890" max="2020"/>
-          <input type='number' class="form-control" placeholder="Released After Year" id='max_year' min="1890" max="2020"/>
-          <button type="button" class="btn btn-info" onclick="sort()" style="width:100%; height:94%">Search</button>
+      <section class="myContent" id="myContent">
+        <div class="cardsGroup" style="margin-top:2%">
+          <p class="nameOfCardsGroup">SEARCH RESULT</p>
         </div>
-        <div class="grid" id="grid">
-          <div class="cardBorder">
+        <div class="grid" id="grid" style="margin-top:2%">
+          <div class="cardBorder search">
             <section class="myContent" id="myContent">
               <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
                 <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
@@ -127,7 +78,7 @@
               </div>
             </section>
           </div>
-          <div class="cardBorder best">
+          <div class="cardBorder search">
             <section class="myContent" id="myContent">
               <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
                 <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
@@ -136,7 +87,7 @@
               </div>
             </section>
           </div>
-          <div class="cardBorder best">
+          <div class="cardBorder search">
             <section class="myContent" id="myContent">
               <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
                 <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
@@ -145,7 +96,7 @@
               </div>
             </section>
           </div>
-          <div class="cardBorder best">
+          <div class="cardBorder search">
             <section class="myContent" id="myContent">
               <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
                 <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
@@ -154,25 +105,7 @@
               </div>
             </section>
           </div>
-          <div class="cardBorder best">
-            <section class="myContent" id="myContent">
-              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
-                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="cardBorder best">
-            <section class="myContent" id="myContent">
-              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
-                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
-            </section>
-          </div>
-      </div>
+        </div>
       </section>
       <footer id="myFooter">
         <hr class="footerLine">
@@ -189,10 +122,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/movie.js"></script>
     <script src="scripts/search.js"></script>
     <script>
-      getMovies();
+      search();
     </script>
   </body>
 </html>

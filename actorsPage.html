@@ -33,13 +33,13 @@
                 <a class="nav-link" href="listsPage.html">Lists</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" style="margin-left:12%">
-              <input class="form-control" style="width:300px" type="search" placeholder="Search...">
-              <button class="btn btn-outline-secondary my-2 my-sm-0" style="margin-left:5px" type="submit">Search</button>
+            <form action="searchResult.html" class="form-inline mr-auto my-2 my-lg-0">
+              <input class="form-control" id="search_line" style="width:300px" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" id="search_button" style="margin-left:5px" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
               <li class="nav-item">
-                <div class="dropdown dropleft">
+                <div class="dropdown mr-auto dropleft">
                   <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Login
                   </a>
@@ -70,19 +70,61 @@
           <p style="text-align: center">Here you can see the actors with the most extensive filmography!
           </p>
         </div>
-        <div class="grid" style="margin-top:2%">
+        <div class="grid" id="grid" style="margin-top:2%">
           <div class="cardBorder">
-            <figure>
-              <a href=""><img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" alt="Red Sparrow" class="cardImage"></a>
-              <figcaption class="cardText">
-								<a href="https://movixhub.com/movies/44445-red-sparrow" class="cardText">Red Sparrow</a>
-              </figcaption>
-						</figure>
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
           </div>
-          <div style="background-color:#66CC99">1</div>
-          <div style="background-color:#6699FF">1</div>
-          <div style="background-color:#66CC99">1</div>
-          <div style="background-color:#6699FF">1</div>
+          <div class="cardBorder">
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cardBorder">
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cardBorder">
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cardBorder">
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cardBorder">
+            <section class="myContent" id="myContent">
+              <div style="padding-left:33%; padding-top:45%; margin-bottom:25%">
+                <div class="spinner-grow text-info text-center" style="width: 6rem; height: 6rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </section>
       <footer id="myFooter">
@@ -100,5 +142,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/actors.js"></script>
+    <script>
+      getActors();
+    </script>
   </body>
 </html>

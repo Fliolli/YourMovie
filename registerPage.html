@@ -33,13 +33,13 @@
                 <a class="nav-link" href="listsPage.html">Lists</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" style="margin-left:12%">
-              <input class="form-control" style="width:300px" type="search" placeholder="Search...">
-              <button class="btn btn-outline-secondary my-2 my-sm-0" style="margin-left:5px" type="submit">Search</button>
+            <form action="searchResult.html" class="form-inline mr-auto my-2 my-lg-0">
+              <input class="form-control" id="search_line" style="width:300px" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" id="search_button" style="margin-left:5px" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
               <li class="nav-item">
-                <div class="dropdown dropleft">
+                <div class="dropdown mr-auto dropleft">
                   <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Login
                   </a>
@@ -65,8 +65,35 @@
         </nav>
       </header>
       <section class="myContent" id="myContent">
-        <div>
-
+        <div class="card" style="margin-top:2%">
+          <div class="logo">Sign in</div>
+          <p style="text-align: center">Create your personal account on YourMovie! <br />
+          Rate movies, create lists and share them!</p>
+        </div>
+        <div class="registerGrid">
+          <div class="form-group">
+					<label>Username</label>
+					<input type="text" class="form-control" placeholder="Nickname..." id="" value="">
+  				</div>
+          <div class="form-group">
+            <label>Login</label>
+            <input type="text" class="form-control" placeholder="Login for sign up..." id="" value="">
+          </div>
+  				<div class="form-group">
+  					<label>Password</label>
+  					<input type="password" class="form-control" placeholder="Write password..." id="" value="">
+  				</div>
+  				<div class="form-group">
+  					<label>Repeat Password</label>
+  					<input type="password" class="form-control" placeholder="Confirm password..." id="" value="">
+  				</div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="E-mail..." id="" value="">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-info" style="margin-top:7%; width:100%;" id="SignIn">Create account</button>
+          </div>
         </div>
       </section>
       <footer id="myFooter">

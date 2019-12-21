@@ -1,6 +1,6 @@
-async function getMovies() {
+async function getActors() {
   for (let j = 1; j < 4; j++) {
-    const info = await fetch(`http://84.201.153.211:8081/api/tmdb/discover/movie?page=${j}`)
+    const info = await fetch(`http://84.201.153.211:8081/api/tmdb/details/person/popular?page=${j}`)
     .then(response => response.json())
     .then(json => [json].map(j => {
       const obj = {
@@ -8,17 +8,17 @@ async function getMovies() {
       }
       return obj;
     }));
-    movies = info[0].results;
-    //console.log(movies);
+    actors = info[0].results;
+    //console.log(actors);
     classname = document.getElementById('grid');
-    for (let i = 0; i < movies.length; i++) {
-      if (j == 1 && i ==0) {
+    for (let i = 0; i < actors.length; i++) {
+      if (j == 1 && i == 0) {
         classname.innerHTML =
         `<div class="cardBorder">
           <figure>
-            <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+            <a href=""><img src="${getPoster(actors[i].profile_path)}" alt="image" class="cardImage"></a>
             <figcaption class="cardText">
-              <a href="" class="cardText">${movies[i].title}</a>
+              <a href="" class="cardText">${actors[i].name}</a>
             </figcaption>
           </figure>
         </div>`;
@@ -26,9 +26,9 @@ async function getMovies() {
       classname.innerHTML +=
       `<div class="cardBorder">
         <figure>
-          <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+          <a href=""><img src="${getPoster(actors[i].profile_path)}" alt="image" class="cardImage"></a>
           <figcaption class="cardText">
-            <a href="" class="cardText">${movies[i].title}</a>
+            <a href="" class="cardText">${actors[i].name}</a>
           </figcaption>
         </figure>
       </div>`;

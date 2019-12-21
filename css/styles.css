@@ -37,6 +37,17 @@ footer{
   margin-right:5%;
   margin-bottom: 0
 }
+.filterGrid{
+  margin-left:19%;
+  margin-right:19%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 40px);
+  grid-column-gap: 14px;
+  grid-row-gap: 10px;
+}
 .grid{
   margin-left:5%;
   margin-right:5%;
