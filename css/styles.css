@@ -50,7 +50,7 @@ footer{
 .cardImage{
   width: 100%;
   height: 320px;
-  object-fit:fill;
+  object-fit: fill;
 }
 .cardText{
   font-size: 1em;
@@ -87,10 +87,57 @@ footer{
   grid-column-gap: 14px;
   grid-row-gap: 40px;
 }
+.movie-seriesGrid{
+  margin-left:7%;
+  margin-right:7%;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(70px, 1fr));
+  grid-template-rows: repeat(10, 60px);
+}
+.trailer{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 6;
+  grid-column-end: 7;
+}
+.movie-seriesFrames{
+  grid-row-start: 1;
+  grid-column-start: 7;
+  grid-row-end: 11;
+  grid-column-end: 11;
+}
+
+a:focus, a:hover { text-decoration: none; color:#000}
+.video {
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    width: :100%;
+    height:100%;
+}
+.video iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
 .footerText{
   text-align: center;
 }
 .footerLine{
   width: 100%;
   margin-left: 0;
+}
+.spinner{
+  text-align: center;
+  margin-top: 40%;
+  padding: 0;
+}
+@media (max-width: 1199.98px) {
+  .grid{
+    margin-left:10%;
+    margin-right:10%;
+  }
 }
