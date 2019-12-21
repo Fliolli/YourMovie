@@ -77,15 +77,15 @@ footer{
   grid-row-gap: 10px;
 }
 .registerGrid{
-  margin-left:10%;
-  margin-right:10%;
-  margin-top: 10%;
+  margin-left:20%;
+  margin-right:20%;
+  margin-top: 4%;
   margin-bottom: 10%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  grid-template-rows: repeat(2, 40px);
+  grid-template-columns: repeat(2, minmax(70px, 1fr));
+  grid-template-rows: repeat(3, 40px);
   grid-column-gap: 14px;
-  grid-row-gap: 10px;
+  grid-row-gap: 40px;
 }
 .footerText{
   text-align: center;
