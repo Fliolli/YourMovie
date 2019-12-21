@@ -27,30 +27,30 @@ footer{
   text-align: left;
   padding: 10px;
   border-radius: 0.25rem;
-  width: 90%;
-  margin-left:5%;
-  margin-right: 5%;
+  width: 92%;
+  margin-left:4%;
+  margin-right: 4%;
   margin-top:1%;
 }
 .nameOfCardsGroup{
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:4%;
+  margin-right:4%;
   margin-bottom: 0;
 }
 .grid{
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:4%;
+  margin-right:4%;
   margin-top: 1%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(1, 355px);
-  grid-column-gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  grid-template-rows: repeat(1, 360px);
+  grid-column-gap: 9px;
   grid-row-gap: 10px;
 }
 .cardImage{
   width: 100%;
-  height: 315px;
-  object-fit:cover;
+  height: 320px;
+  object-fit:fill;
 }
 .cardText{
   font-size: 1em;
