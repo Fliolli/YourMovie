@@ -35,15 +35,15 @@ footer{
 .nameOfCardsGroup{
   margin-left:5%;
   margin-right:5%;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 .grid{
   margin-left:5%;
   margin-right:5%;
   margin-top: 1%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-  grid-template-rows: repeat(1, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: repeat(1, 396px);
   grid-column-gap: 14px;
   grid-row-gap: 10px;
 }
@@ -65,10 +65,32 @@ footer{
 .cardBorder{
   border: double 1px black;
 }
+.filterGrid{
+  margin-left:19%;
+  margin-right:19%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 40px);
+  grid-column-gap: 14px;
+  grid-row-gap: 10px;
+}
+.registerGrid{
+  margin-left:10%;
+  margin-right:10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 40px);
+  grid-column-gap: 14px;
+  grid-row-gap: 10px;
+}
 .footerText{
   text-align: center;
 }
 .footerLine{
-  width: 1900px;
+  width: 100%;
   margin-left: 0;
 }
