@@ -76,7 +76,7 @@ async function getTop() {
     }
     return obj;
   }));
-  console.log(info[0].results);
+  //console.log(info[0].results);
   classname = document.getElementsByClassName('top');
   for (let i = 0; i < 6; i++) {
     //console.log(array[i].id);
