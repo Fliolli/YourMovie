@@ -1,5 +1,5 @@
 async function getActors() {
-  for (let j = 1; j < 4; j++) {
+  for (let j = 1; j < 10; j++) {
     const info = await fetch(`http://84.201.153.211:8081/api/tmdb/details/person/popular?page=${j}`)
     .then(response => response.json())
     .then(json => [json].map(j => {
@@ -16,7 +16,7 @@ async function getActors() {
         classname.innerHTML =
         `<div class="cardBorder">
           <figure>
-            <a href=""><img src="${getPoster(actors[i].profile_path)}" alt="image" class="cardImage"></a>
+            <a id="actor_link" onclick="clickedLink('${actors[i].id}')" href="actorDetails.html"><img src="${getPoster(actors[i].profile_path)}" alt="${actors[i].name}" class="cardImage"></a>
             <figcaption class="cardText">
               <a href="" class="cardText">${actors[i].name}</a>
             </figcaption>
@@ -26,7 +26,7 @@ async function getActors() {
       classname.innerHTML +=
       `<div class="cardBorder">
         <figure>
-          <a href=""><img src="${getPoster(actors[i].profile_path)}" alt="image" class="cardImage"></a>
+          <a id="actor_link" onclick="clickedLink('${actors[i].id}')" href="actorDetails.html"><img src="${getPoster(actors[i].profile_path)}" alt="${actors[i].name}" class="cardImage"></a>
           <figcaption class="cardText">
             <a href="" class="cardText">${actors[i].name}</a>
           </figcaption>

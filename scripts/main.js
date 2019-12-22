@@ -10,15 +10,30 @@ async function getUpcoming() {
   upcomings = info[0].results;
   //console.log(upcomings);
   classname = document.getElementsByClassName('upcoming');
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 20; i++) {
     //console.log(array[i].id);
-    classname[i].innerHTML =
-    `<figure>
-      <a href=""><img src="https://image.tmdb.org/t/p/w500${upcomings[i].poster_path}" alt="Red Sparrow" class="cardImage"></a>
-      <figcaption class="cardText">
-        <a href="" class="cardText">${upcomings[i].title}</a>
-      </figcaption>
-    </figure>`
+    if (i == 0){
+      classname[0].innerHTML =
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${upcomings[i].id}')" href="movieDetails.html"><img src="${getPoster(upcomings[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${upcomings[i].id}">${upcomings[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
+    else {
+      classname[0].innerHTML +=
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${upcomings[i].id}')" href="movieDetails.html"><img src="${getPoster(upcomings[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${upcomings[i].id}">${upcomings[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
   }
 }
 async function getNew() {
@@ -33,15 +48,30 @@ async function getNew() {
   news = info[0].results;
   //console.log(news);
   classname = document.getElementsByClassName('new');
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 20; i++) {
     //console.log(array[i].id);
-    classname[i].innerHTML =
-    `<figure>
-      <a href=""><img src="https://image.tmdb.org/t/p/w500${news[i].poster_path}" alt="Red Sparrow" class="cardImage"></a>
-      <figcaption class="cardText">
-        <a href="" class="cardText">${news[i].title}</a>
-      </figcaption>
-    </figure>`
+    if (i == 0){
+      classname[0].innerHTML =
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${news[i].id}')" href="movieDetails.html"><img src="${getPoster(news[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${news[i].id}">${news[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
+    else {
+      classname[0].innerHTML +=
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${news[i].id}')" href="movieDetails.html"><img src="${getPoster(news[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${news[i].id}">${news[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
   }
 }
 async function getBest() {
@@ -56,15 +86,30 @@ async function getBest() {
   best = info[0].results;
   //console.log(best);
   classname = document.getElementsByClassName('best');
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 20; i++) {
     //console.log(array[i].id);
-    classname[i].innerHTML =
-    `<figure>
-      <a href=""><img src="https://image.tmdb.org/t/p/w500${best[i].poster_path}" alt="Red Sparrow" class="cardImage"></a>
-      <figcaption class="cardText">
-        <a href="" class="cardText">${best[i].title}</a>
-      </figcaption>
-    </figure>`
+    if (i == 0){
+      classname[0].innerHTML =
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${best[i].id}')" href="movieDetails.html"><img src="${getPoster(best[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${best[i].id}">${best[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
+    else {
+      classname[0].innerHTML +=
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${best[i].id}')" href="movieDetails.html"><img src="${getPoster(best[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${best[i].id}">${best[i].title}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
   }
 }
 async function getTop() {
@@ -76,16 +121,32 @@ async function getTop() {
     }
     return obj;
   }));
+  series = info[0].results;
   //console.log(info[0].results);
   classname = document.getElementsByClassName('top');
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 20; i++) {
     //console.log(array[i].id);
-    classname[i].innerHTML =
-    `<figure>
-      <a href=""><img src="https://image.tmdb.org/t/p/w500${info[0].results[i].poster_path}" alt="Red Sparrow" class="cardImage"></a>
-      <figcaption class="cardText">
-        <a href="" class="cardText">${info[0].results[i].name}</a>
-      </figcaption>
-    </figure>`
+    if (i == 0) {
+    classname[0].innerHTML =
+      `<div class="cardBorder">
+        <figure>
+          <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
+          <figcaption class="cardText">
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
+          </figcaption>
+        </figure>
+      </div>`
+    }
+    else {
+      classname[0].innerHTML +=
+        `<div class="cardBorder">
+          <figure>
+            <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
+            <figcaption class="cardText">
+              <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
+            </figcaption>
+          </figure>
+        </div>`
+    }
   }
 }

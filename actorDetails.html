@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- CSS -->
     <link href="css/styles.css" rel="stylesheet">
+    <script src="scripts/linkClickHandler.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -82,7 +83,7 @@
                 <label><b>Credits: </b><br>blabla</label>
                 <label><b>Gender: </b><br>blabla</label>
                 <label><b>Date of birth: </b><br>blabla</label>
-                <label><b>Date of deth: </b><br>blabla</label>
+                <label><b>Date of death: </b><br>blabla</label>
                 <label><b>Place of birth: </b><br>blabla</label>
               </div>
             </div>
@@ -98,49 +99,9 @@
             </div>
             <div class="card" style="margin-top:2%">
                 <label style="font-size: 2em; margin:3%">Acting</label>
-                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
+                <table class="filmographyTable" id="acting_table" border="0" cellspacing="0" cellpadding="0">
+
+
                 </table>
             </div>
             <div class="card" style="margin-top:2%">
@@ -301,5 +262,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/actorDetails.js"></script>
+    <script>
+      details();
+    </script>
   </body>
 </html>
