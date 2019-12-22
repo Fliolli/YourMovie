@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YourMovie</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="myHeader">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="mainPage.html" style="margin-left:5%"><img src="images/ym3.jpg" width="50" height="35" style="margin-right:10%; border-radius:7px" alt="">YourMovie</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:2%">
+              <li class="nav-item">
+                <a class="nav-link" href="moviesPage.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="seriesPage.html">Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="actorsPage.html">Actors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listsPage.html">Lists</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" style="margin-left:12%">
+              <input class="form-control" style="width:300px" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" style="margin-left:5px" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
+              <li class="nav-item">
+                <div class="dropdown dropleft">
+                  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                  </a>
+                  <div class="dropdown-menu">
+                    <form class="px-4 py-3">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <div class="invalid-feedback">
+                          Incorrect e-mail!
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <div class="invalid-feedback">
+                          Incorrect password!
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="registerPage.html">New around here? Sign up</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="myContent" id="myContent">
+        <div class="wrapper" style="display: flex; align-content: flex-start; margin-left:10%; margin-right:10%">
+          <div class="leftColumn">
+            <div class="card">
+              <img src="images/actor.jpg" width="100%" height="auto" style="object-fit: fill; border-radius:7px" alt="">
+              <div class="actorGrid actorGridSpecial">
+                <label><b>Known for: </b><br>blabooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooola</label>
+              </div>
+              <div class="actorGrid" style="margin-top:0px;">
+                <label><b>Credits: </b><br>blabla</label>
+                <label><b>Gender: </b><br>blabla</label>
+                <label><b>Date of birth: </b><br>blabla</label>
+                <label><b>Date of deth: </b><br>blabla</label>
+                <label><b>Place of birth: </b><br>blabla</label>
+              </div>
+            </div>
+          </div>
+          <div class="rightColumn">
+            <div class="card">
+              <label style="font-size: 2em; margin:3%">Karen Gillan</label>
+              <p align="justify" style="margin:3%; margin-top:0px">
+                Karen Gillan (born 28 November 1987) is a Scottish actress, director, and screenwriter from Inverness, Scotland. She played the role of Amy Pond, companion to the Eleventh Doctor, in the BBC One science fiction series Doctor Who (2010–2013). In film, she portrayed Nebula in the Marvel Cinematic Universe films Guardians of the Galaxy (2014) and Guardians of the Galaxy Vol. 2 (2017), Avengers: Infinity War (2018), and Avengers: Endgame (2019), and also played Ruby Roundhouse in the box-office hit Jumanji: Welcome to theo Jungle (2017).
+
+                In 2018, she released her first feature film as writer and director, titled The Party's Just Beginning.
+              </p>
+            </div>
+            <div class="card" style="margin-top:2%">
+                <label style="font-size: 2em; margin:3%">Acting</label>
+                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            <div class="card" style="margin-top:2%">
+                <label style="font-size: 2em; margin:3%">Writing</label>
+                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            <div class="card" style="margin-top:2%">
+                <label style="font-size: 2em; margin:3%">Directing</label>
+                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            <div class="card" style="margin-top:2%">
+                <label style="font-size: 2em; margin:3%">Production</label>
+                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="tableGroup">
+                        <tr>
+                          <td class="" style="padding-left:20px">2000</td>
+                          <td class="">Movie</td>
+                          <td class="">
+                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
+                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="myFooter">
+        <hr class="footerLine">
+        <figcaption class="footerText">
+          <div>
+            <p>©<script>document.write(new Date().getFullYear())</script> ИКБО-02-17 MIREA "Your Movie"</p>
+          </div>
+        </figcaption>
+      </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="scripts/bootstrap.js"></script>
+  </body>
+</html>

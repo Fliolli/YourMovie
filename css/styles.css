@@ -56,7 +56,7 @@ footer{
   grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   grid-template-rows: repeat(1, 360px);
   grid-column-gap: 9px;
-  grid-row-gap: 15px;
+  grid-row-gap: 20px;
 }
 .cardImage{
   width: 100%;
@@ -79,8 +79,8 @@ footer{
 .filterGrid{
   margin-left:19%;
   margin-right:19%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   grid-template-rows: repeat(2, 40px);
@@ -172,6 +172,7 @@ footer{
     min-width: 220px;
     margin-right: 5px;
     margin-top: 5px;
+    margin-bottom: 1%;
 }
 .listCardImage{
   width: 100%;
@@ -203,6 +204,42 @@ a:focus, a:hover { text-decoration: none; color:#000}
     width: 100%;
     height: 100%;
 }
+.leftColumn{
+  height: auto;
+  margin-top: 2%;
+  width:30%;
+  justify-content: flex-end;
+}
+.rightColumn{
+  height:inherit;
+  width:70%;
+  margin-top: 2%;
+  margin-left: 2%;
+  justify-content: flex-start;
+}
+.actorGrid{
+  margin:30px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(230px, 1fr));
+  grid-template-rows: repeat(5, 60px);
+  grid-row-gap: 10px;
+}
+.actorGridSpecial{
+  grid-template-rows: repeat(1, minmax(60px, 1fr));
+}
+.filmographyTable{
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tableGroup{
+  border-collapse: separate;
+  border-bottom: 1px solid #999999;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  margin: 0;
+}
 .footerText{
   text-align: center;
 }
@@ -220,4 +257,7 @@ a:focus, a:hover { text-decoration: none; color:#000}
     margin-left:10%;
     margin-right:10%;
   }
+}
+.card{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
