@@ -27,15 +27,15 @@ footer{
   text-align: left;
   padding: 10px;
   border-radius: 0.25rem;
-  width: 90%;
-  margin-left:5%;
-  margin-right: 5%;
+  width: 92%;
+  margin-left:4%;
+  margin-right: 4%;
   margin-top:1%;
 }
 .nameOfCardsGroup{
-  margin-left:5%;
-  margin-right:5%;
-  margin-bottom: 0
+  margin-left:4%;
+  margin-right:4%;
+  margin-bottom: 0;
 }
 .filterGrid{
   margin-left:19%;
@@ -49,19 +49,19 @@ footer{
   grid-row-gap: 10px;
 }
 .grid{
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:4%;
+  margin-right:4%;
   margin-top: 1%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-  grid-template-rows: repeat(1, 400px);
-  grid-column-gap: 14px;
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  grid-template-rows: repeat(1, 360px);
+  grid-column-gap: 9px;
+  grid-row-gap: 15px;
 }
 .cardImage{
   width: 100%;
-  height: 360px;
-  object-fit: cover;
+  height: 320px;
+  object-fit: fill;
 }
 .cardText{
   font-size: 1em;
@@ -76,10 +76,140 @@ footer{
 .cardBorder{
   border: double 1px black;
 }
+.filterGrid{
+  margin-left:19%;
+  margin-right:19%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 40px);
+  grid-column-gap: 14px;
+  grid-row-gap: 10px;
+}
+.registerGrid{
+  margin-left:20%;
+  margin-right:20%;
+  margin-top: 4%;
+  margin-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(70px, 1fr));
+  grid-template-rows: repeat(3, 40px);
+  grid-column-gap: 14px;
+  grid-row-gap: 40px;
+}
+.movie-seriesGrid{
+  margin-left:5%;
+  margin-right:5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(475px, 1fr));
+}
+.trailer{
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
+}
+.framesGrid{
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
+  height: 90%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.frame{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+.infoCard{
+  width:100%;
+  height: 100%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
+}
+.infoGrid{
+  width:100%;
+  height: 100%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(70px, 1fr));
+  grid-template-rows: repeat(3, 40px);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+.scrollList{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.listCard{
+  margin-left:5%;
+  margin-right:8%;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+.listCardBody {
+    min-height: 390px;
+    min-width: 220px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.listCardImage{
+  width: 100%;
+  height: 320px;
+  object-fit: fill;
+}
+.listCardText{
+  font-size: 1em;
+  color: #000;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 2%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+a:focus, a:hover { text-decoration: none; color:#000}
+.video {
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    width: :100%;
+    height:100%;
+}
+.video iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
 .footerText{
   text-align: center;
 }
 .footerLine{
-  width: 1900px;
+  width: 100%;
   margin-left: 0;
+}
+.spinner{
+  text-align: center;
+  margin-top: 40%;
+  padding: 0;
+}
+@media (max-width: 1199.98px) {
+  .grid{
+    margin-left:10%;
+    margin-right:10%;
+  }
 }
