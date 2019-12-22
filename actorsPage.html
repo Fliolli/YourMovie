@@ -33,11 +33,11 @@
                 <a class="nav-link" href="listsPage.html">Lists</a>
               </li>
             </ul>
-            <form action="searchResult.html" class="form-inline mr-auto my-2 my-lg-0">
+            <form action="searchResult.html" class="form-inline mr-auto my-2 my-lg-0" style="margin-left:12%">
               <input class="form-control" id="search_line" style="width:300px" type="search" placeholder="Search...">
               <button class="btn btn-outline-secondary my-2 my-sm-0" id="search_button" style="margin-left:5px" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
               <li class="nav-item">
                 <div class="dropdown mr-auto dropleft">
                   <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,10 +48,16 @@
                       <div class="form-group">
                         <label for="exampleDropdownFormEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <div class="invalid-feedback">
+                          Incorrect e-mail!
+                        </div>
                       </div>
                       <div class="form-group">
                         <label for="exampleDropdownFormPassword1">Password</label>
                         <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <div class="invalid-feedback">
+                          Incorrect password!
+                        </div>
                       </div>
                       <button type="submit" class="btn btn-primary">Sign in</button>
                     </form>
