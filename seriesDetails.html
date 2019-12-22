@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YourMovie</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="myHeader">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="mainPage.html" style="margin-left:5%"><img src="images/ym3.jpg" width="50" height="35" style="margin-right:10%; border-radius:7px" alt="">YourMovie</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:2%">
+              <li class="nav-item">
+                <a class="nav-link" href="moviesPage.html">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="seriesPage.html">Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="actorsPage.html">Actors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="listsPage.html">Lists</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" style="margin-left:12%">
+              <input class="form-control" style="width:300px" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" style="margin-left:5px" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
+              <li class="nav-item">
+                <div class="dropdown dropleft">
+                  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                  </a>
+                  <div class="dropdown-menu">
+                    <form class="px-4 py-3">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <div class="invalid-feedback">
+                          Incorrect e-mail!
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <div class="invalid-feedback">
+                          Incorrect password!
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="registerPage.html">New around here? Sign up</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="myContent" id="myContent">
+        <div class="movie-seriesGrid">
+          <div class="trailer video"><iframe src="https://www.youtube.com/embed/AWdA7hdP4ZA?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+          <div class="framesGrid">
+            <div id="carouselExampleControls" class="carousel slide" style="height:100%" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active container">
+                  <img src="images/11.jpg" class="frame" alt=" ">
+                </div>
+                <div class="carousel-item container">
+                  <img src="images/12.jpg" class="frame" alt=" ">
+                </div>
+                <div class="carousel-item container">
+                  <img src="images/11.jpg" class="frame" alt=" ">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="movie-seriesGrid">
+          <div class="card infoCard">
+            <div class="infoGrid">
+              <label style="grid-column-start: 1; grid-column-end:3; font-size: 2em; height:auto-fit">Title</label>
+              <label style="grid-column-start: 1; grid-column-end:3; height:auto-fit"><b>Genres: </b></label>
+              <label style="grid-column-start: 1; grid-column-end:3; height:auto-fit">description</label>
+              <label style="grid-column-start: 1; grid-column-end:3; height:auto-fit"><b>Count of seasons: </b></label>
+              <label><b>Release Date: </b></label>
+              <label><b>Rating: </b></label>
+              <label><b>Country: </b></label>
+              <label><b>Language: </b></label>
+              <label><b>Runtime: </b></label>
+              <label><b>Directing: </b></label>
+              <label><b>Writing: </b></label>
+              <label><b>Age limit: </b></label>
+            </div>
+          </div>
+          <div class="card userCard" style="margin-left:5%; width:88%">
+            <div class="row" style="display: table-row; margin-top:5%">
+              <div class="row">
+                <div class="dropdown" style="margin-left:10%; width:40%; margin-bottom:1%">
+                  <button class="btn btn-primary dropdown-toggle" style="width:100%"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Add in my list
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">List1</a>
+                    <a class="dropdown-item" href="#">List2</a>
+                    <a class="dropdown-item" href="#">List3</a>
+                  </div>
+                </div>
+                <div class="input-group" style="margin-left:10%; width:29%; margin-bottom:1%">
+                  <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Give a grade</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                  </select>
+                  <div>
+                    <button class="btn btn-primary" type="button">Rate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin-left:8%; margin-top:0px; padding:0px; height:70%">
+                <label class="cardText"><b>Your comment</b></label>
+                <textarea style="height:110%; width:100%; margin-right:12%; margin-bottom:1%"></textarea>
+                <button class="btn btn-primary" style="width:20%; margin-left:68%" type="button">Leave</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card listCard">
+          <label style="font-size: 2em">Cast</label>
+          <div class="scrollList d-flex flex-row flex-nowrap">
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Role</label>
+            </div>
+          </div>
+        </div>
+        <div class="card listCard">
+          <label style="font-size: 2em">Episodes</label>
+          <div class="scrollList d-flex flex-row flex-nowrap">
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season1</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="seen"><img src="images/success.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season2</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="seen"><img src="images/success.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season3</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season4</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season5</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season6</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season7</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+            <div class="card listCardBody">
+              <img src="https://image.tmdb.org/t/p/w342/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg" class="listCardImage" alt="">
+              <label class="cardText"><b>Name</b></label>
+              <label class="cardText">Season8</label>
+              <button type="button" style="width:30%; margin-left:35%" class="btn" data-toggle="tooltip" data-placement="right" title="not viewed"><img src="images/plus.png" style="height:95%; width:95%" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="myFooter">
+        <hr class="footerLine">
+        <figcaption class="footerText">
+          <div>
+            <p>©<script>document.write(new Date().getFullYear())</script> ИКБО-02-17 MIREA "Your Movie"</p>
+          </div>
+        </figcaption>
+      </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="scripts/bootstrap.js"></script>
+  </body>
+</html>
