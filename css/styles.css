@@ -256,6 +256,7 @@ a:focus, a:hover { text-decoration: none; color:#000}
 }
 .tableGroup{
   border-collapse: separate;
+  border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
   padding: 10px 0 10px 0;
   width: 100%;

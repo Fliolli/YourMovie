@@ -18,20 +18,21 @@ async function sort() {
     else
       string += `&vote_average.gte=${rating}`;
   }
-  if (document.getElementById('min_year').value != "" && document.getElementById('min_year').value <= 2020 && document.getElementById('min_year').value >= 1890) {
+  if (document.getElementById('min_year').value != "") {
     min_date = document.getElementById('min_year').value;
     if (string === "")
       string += `?release_date.lte=${min_date}-01-01`;
     else
       string += `&release_date.lte=${min_date}-01-01`;
   }
-  if (document.getElementById('max_year').value != "" && document.getElementById('max_year').value <= 2020 && document.getElementById('max_year').value >= 1890) {
+  if (document.getElementById('max_year').value != "") {
     max_date = document.getElementById('max_year').value;
     if (string === "")
       string += `?release_date.gte=${max_date}-01-01`;
     else
       string += `&release_date.gte=${max_date}-01-01`;
   }
+  //console.log(string);
   const pages = await fetch(`http://84.201.153.211:8081/api/tmdb/discover/movie${string}`)
   .then(response => response.json())
   .then(json => [json].map(j => {
@@ -45,25 +46,36 @@ async function sort() {
     num = 10;
   else
     num = pages[0].total_pages;
-  if (string != "")
-    query = `http://84.201.153.211:8081/api/tmdb/discover/movie${string}&page=`;
-  else
-    query = `http://84.201.153.211:8081/api/tmdb/discover/movie?page=`;
-  for (let j = 1; j < num + 1; j++) {
-    const info = await fetch(`${query}${j}`)
-    .then(response => response.json())
-    .then(json => [json].map(j => {
-      const obj = {
-        results: j.results,
-      }
-      return obj;
-    }));
-    movies = info[0].results;
-    //console.log(movies);
-    classname = document.getElementById('grid');
-    for (let i = 0; i < movies.length; i++) {
-      if (j == 1 && i == 0) {
-        classname.innerHTML =
+  if (num != 0) {
+    if (string != "")
+      query = `http://84.201.153.211:8081/api/tmdb/discover/movie${string}&page=`;
+    else
+      query = `http://84.201.153.211:8081/api/tmdb/discover/movie?page=`;
+    for (let j = 1; j < num + 1; j++) {
+      const info = await fetch(`${query}${j}`)
+      .then(response => response.json())
+      .then(json => [json].map(j => {
+        const obj = {
+          results: j.results,
+        }
+        return obj;
+      }));
+      movies = info[0].results;
+      //console.log(movies);
+      classname = document.getElementById('grid');
+      for (let i = 0; i < movies.length; i++) {
+        if (j == 1 && i == 0) {
+          classname.innerHTML =
+          `<div class="cardBorder">
+            <figure>
+              <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
+              <figcaption class="cardText">
+                <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
+              </figcaption>
+            </figure>
+          </div>`;
+        } else {
+        classname.innerHTML +=
         `<div class="cardBorder">
           <figure>
             <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
@@ -72,17 +84,11 @@ async function sort() {
             </figcaption>
           </figure>
         </div>`;
-      } else {
-      classname.innerHTML +=
-      `<div class="cardBorder">
-        <figure>
-          <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
-          <figcaption class="cardText">
-            <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
-          </figcaption>
-        </figure>
-      </div>`;
+        }
       }
     }
+  }
+  else {
+     document.getElementById('grid').innerHTML = `<a class="logo">NOT FOUND</a>`;
   }
 }

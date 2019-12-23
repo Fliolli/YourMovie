@@ -100,7 +100,7 @@ async function details() {
       image = `https://image.tmdb.org/t/p/w500${actors[0].cast[i].profile_path}`;
     document.getElementById('scrollList').innerHTML+=
     `<div class="card listCardBody">
-      <img src="${image}" class="listCardImage" alt="${actors[0].cast[i].name}">
+      <a id="actor_link" onclick="clickedLink('${actors[0].cast[i].id}')" href="actorDetails.html"><img src="${image}" class="listCardImage" alt="${actors[0].cast[i].name}"></a>
       <label class="cardText"><b>${actors[0].cast[i].name}</b></label>
       <label class="cardText">${actors[0].cast[i].character}</label>
     </div>`

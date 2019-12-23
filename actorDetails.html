@@ -34,11 +34,11 @@
                 <a class="nav-link" href="listsPage.html">Lists</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" style="margin-left:12%">
-              <input class="form-control" style="width:300px" type="search" placeholder="Search...">
-              <button class="btn btn-outline-secondary my-2 my-sm-0" style="margin-left:5px" type="submit">Search</button>
+            <form action="searchResult.html" class="form-inline mr-auto my-2 my-lg-0">
+              <input class="form-control" id="search_line" style="width:300px" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary my-2 my-sm-0" id="search_button" style="margin-left:5px" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left:20%">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
               <li class="nav-item">
                 <div class="dropdown dropleft">
                   <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,174 +75,33 @@
         <div class="wrapper" style="display: flex; align-content: flex-start; margin-left:10%; margin-right:10%">
           <div class="leftColumn">
             <div class="card">
-              <img src="images/actor.jpg" width="100%" height="auto" style="object-fit: fill; border-radius:7px" alt="">
+              <img id="actor_image" src="" width="100%" height="auto" style="object-fit: fill; border-radius:7px" alt="">
               <div class="actorGrid actorGridSpecial">
-                <label><b>Known for: </b><br>blabooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooola</label>
+                <label><b>Known for: </b><br><a id="known_for">Text</a></label>
               </div>
               <div class="actorGrid" style="margin-top:0px;">
-                <label><b>Credits: </b><br>blabla</label>
-                <label><b>Gender: </b><br>blabla</label>
-                <label><b>Date of birth: </b><br>blabla</label>
-                <label><b>Date of death: </b><br>blabla</label>
-                <label><b>Place of birth: </b><br>blabla</label>
+                <label><b>Gender: </b><br><a id="gender">blabla</a></label>
+                <label><b>Date of birth: </b><br><a id="birth">blabla</a></label>
+                <label><b>Date of death: </b><br><a id="death">blabla</a></label>
+                <label><b>Place of birth: </b><br><a id="place">blabla</a></label>
               </div>
             </div>
           </div>
           <div class="rightColumn">
             <div class="card">
-              <label style="font-size: 2em; margin:3%">Karen Gillan</label>
-              <p align="justify" style="margin:3%; margin-top:0px">
-                Karen Gillan (born 28 November 1987) is a Scottish actress, director, and screenwriter from Inverness, Scotland. She played the role of Amy Pond, companion to the Eleventh Doctor, in the BBC One science fiction series Doctor Who (2010–2013). In film, she portrayed Nebula in the Marvel Cinematic Universe films Guardians of the Galaxy (2014) and Guardians of the Galaxy Vol. 2 (2017), Avengers: Infinity War (2018), and Avengers: Endgame (2019), and also played Ruby Roundhouse in the box-office hit Jumanji: Welcome to theo Jungle (2017).
-
-                In 2018, she released her first feature film as writer and director, titled The Party's Just Beginning.
+              <label id="actor_name" style="font-size: 2em; margin:3%">Name</label>
+              <p id="bio" align="justify" style="margin:3%; margin-top:0px">
+                biography
               </p>
             </div>
             <div class="card" style="margin-top:2%">
                 <label style="font-size: 2em; margin:3%">Acting</label>
                 <table class="filmographyTable" id="acting_table" border="0" cellspacing="0" cellpadding="0">
-
-
                 </table>
             </div>
             <div class="card" style="margin-top:2%">
-                <label style="font-size: 2em; margin:3%">Writing</label>
-                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-            </div>
-            <div class="card" style="margin-top:2%">
-                <label style="font-size: 2em; margin:3%">Directing</label>
-                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-            </div>
-            <div class="card" style="margin-top:2%">
-                <label style="font-size: 2em; margin:3%">Production</label>
-                <table class="filmographyTable" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="tableGroup">
-                        <tr>
-                          <td class="" style="padding-left:20px">2000</td>
-                          <td class="">Movie</td>
-                          <td class="">
-                            <a class="" href=""><bdi>Gunpowder Milkshake</bdi></a>
-                              <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>Sam
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
+                <label style="font-size: 2em; margin:3%">Crew</label>
+                <table class="filmographyTable" id="crew_table" border="0" cellspacing="0" cellpadding="0">
                 </table>
             </div>
           </div>
