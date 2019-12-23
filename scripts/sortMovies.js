@@ -59,16 +59,16 @@ async function sort() {
       return obj;
     }));
     movies = info[0].results;
-    console.log(movies);
+    //console.log(movies);
     classname = document.getElementById('grid');
     for (let i = 0; i < movies.length; i++) {
       if (j == 1 && i == 0) {
         classname.innerHTML =
         `<div class="cardBorder">
           <figure>
-            <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+            <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
             <figcaption class="cardText">
-              <a href="" class="cardText">${movies[i].title}</a>
+              <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
             </figcaption>
           </figure>
         </div>`;
@@ -76,9 +76,9 @@ async function sort() {
       classname.innerHTML +=
       `<div class="cardBorder">
         <figure>
-          <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+          <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
           <figcaption class="cardText">
-            <a href="" class="cardText">${movies[i].title}</a>
+            <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
           </figcaption>
         </figure>
       </div>`;

@@ -55,36 +55,36 @@ async function search() {
           classname.innerHTML =
           `<div class="cardBorder">
             <figure>
-              <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+              <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
               <figcaption class="cardText">
-                <a href="" class="cardText">${movies[i].title}</a>
+                <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
               </figcaption>
             </figure>
           </div>
           <div class="cardBorder">
-            <figure>
-              <a href=""><img src="${getPoster(series[i].poster_path)}" alt="image" class="cardImage"></a>
-              <figcaption class="cardText">
-                <a href="" class="cardText">${series[i].name}</a>
-              </figcaption>
-            </figure>
+          <figure>
+            <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
+            <figcaption class="cardText">
+              <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
+            </figcaption>
+          </figure>
           </div>`;
         } else {
         classname.innerHTML +=
         `<div class="cardBorder">
           <figure>
-            <a href=""><img src="${getPoster(movies[i].poster_path)}" alt="image" class="cardImage"></a>
+            <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
             <figcaption class="cardText">
-              <a href="" class="cardText">${movies[i].title}</a>
+              <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
             </figcaption>
           </figure>
         </div>`;
         classname.innerHTML +=
         `<div class="cardBorder">
           <figure>
-            <a href=""><img src="${getPoster(series[i].poster_path)}" alt="image" class="cardImage"></a>
+            <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
             <figcaption class="cardText">
-              <a href="" class="cardText">${series[i].name}</a>
+              <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
             </figcaption>
           </figure>
         </div>`;
