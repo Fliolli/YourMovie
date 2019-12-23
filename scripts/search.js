@@ -93,7 +93,7 @@ async function search() {
     }
   }
   else {
-    classname = document.getElementById('grid').innerHTML = `<a class="logo">NOT FOUND</a>`;
+    document.getElementById('grid').innerHTML = `<a class="logo">NOT FOUND</a>`;
   }
 }
 function getPoster(path) {
