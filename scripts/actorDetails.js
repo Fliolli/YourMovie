@@ -135,6 +135,12 @@ async function details() {
     `<a class="logo" style="padding-left:40%;">EMPTY</a>`;
   }
 }
+function getTitle(item) {
+  if (item.media_type == 'tv')
+    return item.name;
+  else
+    return item.title;
+}
 function getDeath(date) {
   if (date === null)
     return 'Alive';

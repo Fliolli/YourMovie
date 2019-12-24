@@ -62,12 +62,12 @@ async function search() {
             </figure>
           </div>
           <div class="cardBorder">
-          <figure>
-            <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
-            <figcaption class="cardText">
-              <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
-            </figcaption>
-          </figure>
+            <figure>
+              <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
+              <figcaption class="cardText">
+                <a id="movie_link" href="movieDetails.html" class="cardText" name="${series[i].id}">${series[i].name}</a>
+              </figcaption>
+            </figure>
           </div>`;
         } else {
         classname.innerHTML +=
@@ -78,9 +78,8 @@ async function search() {
               <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
             </figcaption>
           </figure>
-        </div>`;
-        classname.innerHTML +=
-        `<div class="cardBorder">
+        </div>
+        <div class="cardBorder">
           <figure>
             <a id="movie_link" onclick="clickedLink('${series[i].id}')" href="seriesDetails.html"><img src="${getPoster(series[i].poster_path)}" class="cardImage"></a>
             <figcaption class="cardText">
