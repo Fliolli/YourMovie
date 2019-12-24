@@ -68,9 +68,9 @@ async function sort() {
           classname.innerHTML =
           `<div class="cardBorder">
             <figure>
-              <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
+              <a id="series_link" onclick="clickedLink('${movies[i].id}')" href="seriesDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
               <figcaption class="cardText">
-                <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
+                <a id="series_link" href="seriesDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
               </figcaption>
             </figure>
           </div>`;
@@ -78,9 +78,9 @@ async function sort() {
         classname.innerHTML +=
         `<div class="cardBorder">
           <figure>
-            <a id="movie_link" onclick="clickedLink('${movies[i].id}')" href="movieDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
+            <a id="series_link" onclick="clickedLink('${movies[i].id}')" href="seriesDetails.html"><img src="${getPoster(movies[i].poster_path)}" class="cardImage"></a>
             <figcaption class="cardText">
-              <a id="movie_link" href="movieDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
+              <a id="series_link" href="seriesDetails.html" class="cardText" name="${movies[i].id}">${movies[i].title}</a>
             </figcaption>
           </figure>
         </div>`;

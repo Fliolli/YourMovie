@@ -1,28 +1,13 @@
 async function detailsS() {
 
-  if (Cookies.get('user') != undefined) {
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Basic " + btoa(Cookies.get('user') + ":" + Cookies.get('pass')));
 
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    };
-    response = await fetch("http://84.201.153.211:8081/api/client/lists/movie", requestOptions);
-    obj = await response.json();
-
-    for (let i in obj) {
-      console.log(obj[i]);
-      document.getElementById('lists').innerHTML +=`<a class="dropdown-item" href="#">${obj[i].name}</a>`;
-    }
-  }
   id = localStorage.getItem('id');
   console.log(id);
   movie = await fetch(`http://84.201.153.211:8081/api/tmdb/details/tv/${id}`)
     .then(response => response.json())
     .then(json => [json].map(j => {
       const obj = {
+        id: j.id,
         name: j.name,
         overview: j.overview,
         number_of_seasons: j.number_of_seasons,
@@ -148,6 +133,23 @@ async function detailsS() {
         </div>`
     }
 
+  }
+  if (Cookies.get('user') != undefined) {
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Basic " + btoa(Cookies.get('user') + ":" + Cookies.get('pass')));
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    response = await fetch("http://84.201.153.211:8081/api/client/lists/tv", requestOptions);
+    obj = await response.json();
+    console.log(obj);
+    for (let i in obj) {
+      //console.log(obj[i]);
+      document.getElementById('lists').innerHTML +=`<a class="dropdown-item" onclick="addSeries(${obj[i].id},${movie[0].id}); return false;">${obj[i].name}</a>`;
+    }
   }
 }
 function getCountry(arr) {

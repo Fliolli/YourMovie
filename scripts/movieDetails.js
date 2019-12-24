@@ -100,6 +100,23 @@ async function details() {
       <label class="cardText">${actors[0].cast[i].character}</label>
     </div>`
   }
+  if (Cookies.get('user') != undefined) {
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Basic " + btoa(Cookies.get('user') + ":" + Cookies.get('pass')));
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    response = await fetch("http://84.201.153.211:8081/api/client/lists/movie", requestOptions);
+    obj = await response.json();
+
+    for (let i in obj) {
+      //console.log(obj[i]);
+      document.getElementById('lists').innerHTML +=`<a class="dropdown-item" onclick="addMovie(${obj[i].id},${movie[0].id}); return false;">${obj[i].name}</a>`;
+    }
+  }
 }
 
 function getSomething(arr) {
