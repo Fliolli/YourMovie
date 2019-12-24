@@ -94,9 +94,12 @@
         <div class="movie-seriesGrid">
           <div class="card infoCard">
             <div class="infoGrid">
-              <label style="grid-column-start: 1; grid-column-end:3; font-size: 2em; height:auto-fit" id="title">Title</label>
-              <label style="grid-column-start: 1; grid-column-end:3; height:auto-fit" id="description">description</label>
-              <label style="grid-column-start: 1; grid-column-end:3; height:auto-fit"><b>Count of seasons: </b><a id="seasons"></a></label>
+              <label style="grid-column-start: 1; grid-column-end:3; font-size: 2em" id="title">Title</label>
+              <div class="infoGridSpecial">
+
+              </div>
+              <label style="grid-column-start: 1; grid-column-end:3" id="description">description</label>
+              <label style="grid-column-start: 1; grid-column-end:3"><b>Count of seasons: </b><a id="seasons"></a></label>
               <label><b>Release Date: </b><a id="release"></a></label>
               <label><b>Rating: </b><a id="rating"></a></label>
               <label><b>Country: </b><a id="country"></a></label>
@@ -113,9 +116,9 @@
                     Add in my list
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">List1</a>
-                    <a class="dropdown-item" href="#">List2</a>
-                    <a class="dropdown-item" href="#">List3</a>
+                    <a class="dropdown-item" href="#">Watchlist</a>
+                    <a class="dropdown-item" href="#">Favorites</a>
+                    <a class="dropdown-item" href="#">On a plan</a>
                   </div>
                 </div>
                 <div class="input-group" style="margin-left:10%; width:29%; margin-bottom:1%">
@@ -139,7 +142,7 @@
               </div>
               <div class="row" style="margin-left:8%; margin-top:0px; padding:0px; height:70%">
                 <label class="cardText"><b>Your comment</b></label>
-                <textarea style="height:60%; width:100%; margin-right:12%; margin-bottom:1%"></textarea>
+                <textarea style="height:80%; width:100%; margin-right:12%; margin-bottom:1%"></textarea>
                 <button class="btn btn-primary" style="width:20%; margin-left:68%" type="button">Leave</button>
               </div>
             </div>
