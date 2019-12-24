@@ -67,9 +67,9 @@ async function details() {
         <td>
           <table class="tableGroup">
             <tr>
-              <td class="" style="padding-left:20px">${getDate(actor_job_mov[0].cast[i].release_date)}</td>
-              <td class="">Movie</td>
-              <td class="">
+              <td class="" style="padding-left:20px; width:140px">${getDate(actor_job_mov[0].cast[i].release_date)}</td>
+              <td class="" style="padding-left:20px; width:90px">Movie</td>
+              <td class="" style="padding-left:5px">
                 <a id="movie_link" onclick="clickedLink('${actor_job_mov[0].cast[i].id}')" href="movieDetails.html"><bdi>${actor_job_mov[0].cast[i].title}</bdi></a>
                   <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>${getDate(actor_job_mov[0].cast[i].character)}
               </td>
@@ -88,9 +88,9 @@ async function details() {
         <td>
           <table class="tableGroup">
             <tr>
-              <td class="" style="padding-left:20px">${getDate(actor_job_tv[0].cast[i].first_air_date)}</td>
-              <td class="">Series</td>
-              <td class="">
+              <td class="" style="padding-left:20px; width:140px">${getDate(actor_job_tv[0].cast[i].first_air_date)}</td>
+              <td class="" style="padding-left:20px; width:90px">Series</td>
+              <td class="" style="padding-left:5px">
                 <a id="series_link" onclick="clickedLink('${actor_job_tv[0].cast[i].id}')" href="seriesDetails.html"><bdi>${actor_job_tv[0].cast[i].name}</bdi></a>
                   <span style="color: rgba(0, 0 , 0, 0.5)"> as </span>${getDate(actor_job_tv[0].cast[i].character)}
               </td>
@@ -119,9 +119,9 @@ async function details() {
         <td>
           <table class="tableGroup">
             <tr>
-              <td class="" style="padding-left:20px">${getDate(actor_job_mixed[0].crew[i].release_date)}</td>
-              <td class="">${getDate(actor_job_mixed[0].crew[i].job)}</td>
-              <td class="">
+              <td class="" style="padding-left:20px; width:140px">${getDate(actor_job_mixed[0].crew[i].release_date)}</td>
+              <td class="" style="padding-left:20px; width:90px">${getDate(actor_job_mixed[0].crew[i].job)}</td>
+              <td class="" style="padding-left:5px">
                 <a id="movie_link" onclick="clickedLink('${actor_job_mixed[0].crew[i].id}')" href="movieDetails.html"><bdi>${actor_job_mixed[0].crew[i].title}</bdi></a>
               </td>
             </tr>
